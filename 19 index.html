@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de DOM</title>
+    <style>
+        #meuTitulo {
+            color: blue;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 id="meuTitulo">Título original</h1>
+    <button onclick="alterarTitulo()">Alterar Título</button>
+
+    <script>
+        function alterarTitulo() {
+            const titulo = document.getElementById('meuTitulo'); // Captura o elemento com ID 'meuTitulo'
+            titulo.textContent = 'Título alterado via JavaScript!'; // Altera o texto do elemento
+            titulo.style.color = 'red'; // Altera a cor do texto
+        }
+    </script>
+</body>
+</html>

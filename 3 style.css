@@ -1,0 +1,154 @@
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(173, 172, 172);
+    color: white;
+    margin: 0;
+}
+
+/* Estilo para cabeçalho */
+header {
+    background-color: rgb(14, 33, 90);
+    color: white;
+    padding: 20px;
+    text-align: left;
+    width: 100%;
+    border-radius: 0;
+}
+
+/* Usando classe para links */
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+/* Usando classe com hover */
+a:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+
+/* Estilo específico para listas utilizando uma CLASS */
+ul li {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 2000px; 
+    margin: 20px;
+    padding: 20px;  
+    background-color:rgb(173, 172, 172);
+}
+
+/* Estilo para o conteúdo principal utilizando TAG */
+main {
+    flex: 3;
+    background-color: rgb(139, 173, 218);
+    padding: 40px;
+    border-radius: 20px;
+    width: 80%;
+    margin: 30px auto;
+}
+
+aside {
+    flex: 1;
+    background-color: white;
+    color: black;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+/* Estilo para os títulos utilizando TAG */
+h2 {
+    margin-bottom: 15px;
+    color: rgb(14, 33, 90);
+}
+
+/* Estilo para parágrafos utilizando TAG*/
+p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+    color: black;
+}
+
+/* Estilo para imagens */
+.banner {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.legenda {
+    /*position: absolute;*/
+    bottom: 0;
+    width: 100%;
+    color: black;
+    text-align: left;
+    padding: 15px;
+    font-size: 16px;
+}
+
+.banner button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, .5);
+    color: white;
+    border: none;
+    font-size: 35px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.anterior {
+    left: 15px;
+}
+
+.proximo {
+    right: 15px;
+}
+
+.banner button:hover {
+    background: #0b3d91;
+}
+
+/* Estilo para rodapé */
+footer {
+    background-color: rgb(14, 33, 90);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+footer p {
+    line-height: 1.8;
+    margin-bottom: 0px;
+    text-align: center;
+    color: rgb(255, 254, 254);
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

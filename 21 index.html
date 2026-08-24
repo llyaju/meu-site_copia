@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos com JavaScript</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 200px;
+            border: 2px solid blue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">Passe o mouse aqui</div>
+    <script>
+        const box = document.getElementById('box');
+        box.onclick = function() {
+            box.textContent = 'Clicou!';
+            box.style.backgroundColor = 'green';
+        };
+        box.onmouseover = function() {
+            box.textContent = 'Mouse sobre!';
+            box.style.backgroundColor = 'orange';
+        };
+        box.onmouseout = function() {
+            box.textContent = 'Passe o mouse aqui';
+            box.style.backgroundColor = "lightblue";
+        };
+    </script>
+</body>
+</html>

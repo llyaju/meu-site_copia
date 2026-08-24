@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid com Áreas</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 3fr; /* 1 coluna estreita, 1 coluna larga */
+            grid-template-rows: 100px auto; /* Cabeçalho de 100px e conteúdo ajustável */
+            grid-template-areas:
+                "header header"
+                "sidebar content"; /* Áreas para sidebar e conteúdo */
+            gap: 10px;
+        }
+        header {
+            grid-area: header;
+            background-color: lightcoral;
+            padding: 20px;
+        }
+        aside {
+            grid-area: sidebar;
+            background-color: lightgreen;
+            padding: 20px;
+        }
+        main {
+            grid-area: content;
+            background-color: lightyellow;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Cabeçalho</header>
+        <aside>Sidebar</aside>
+        <main>Conteúdo principal</main>
+    </div>
+</body>
+</html>

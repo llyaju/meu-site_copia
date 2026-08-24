@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo - setTimeout e setInterval</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f5f5;
+            margin: 40px;
+            text-align: center;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 500px;
+            margin: auto;
+            box-shadow: 0 0 10px rgb(0, 0, 0, .2);
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 8px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #timeout {
+            background: #2196F3;
+            color: white;
+        }
+
+        #interval {
+            background: #4CAF50;
+            color: white;
+        }
+
+        #parar {
+            background: #F44336;
+            color: white;
+        }
+
+        #resultado {
+            margin-top: 30px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>setTimeout() e setInterval()</h1>
+        <button id="timeout">Executar setTimeout</button>
+        <button id="interval"> Iniciar setInterval</bitton>
+        <button id="parar">Parar intervalo</button>
+
+        <div id="resultado">
+            Aguardando...
+        </div>
+    </div>
+
+    <script>
+        const resultado = document.getElementById("resultado");
+
+        let contador = 0;
+        let intervalo = null;
+
+        // ---------------------------
+        // Exemplo de setTimeout()
+        // ---------------------------
+        document.getElementById("timeout").addEventListener("click", ()=>{
+            resultado.innerHTML = "Esperando 3 segundos...";
+
+            setTimeout(()=>{
+                resultado.innerHTML = "Executado após 3 segundos!";
+            },5000);
+        });
+
+        // --------------------------
+        // Exemplo de setInterval()
+        // --------------------------
+        document.getElementById("interval").addEventListener("click", ()=>{
+            //Evita criar vários intervalos
+            if(intervalo !== null){
+                return;
+            }
+
+            contador = 0;
+            resultado.innerHTML = "Contador: 0";
+
+            intervalo = setInterval(()=>{
+                contador++;
+                resultado.innerHTML = "Contador: " + contador;
+        },1000);
+        });
+
+        // -------------------------
+        // Parar o intervalo
+        // -------------------------
+        document.getElementById("parar").addEventListener("click", ()=>{
+            clearInterval(intervalo);
+            intervalo = null;
+            resultado.innerHTML += "<br>Intervalo Interrompido.";
+        });
+    </script>
+</body>
+</html>

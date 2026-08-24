@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação Dinâmica</title>
+</head>
+<body>
+    <h1 id="titulo">Bem-vindo!</h1>
+    <button id="botao">Clique aqui</button>
+    <script>
+        const titulo = document.getElementById('titulo');
+        const botao = document.getElementById('botao');
+        botao.addEventListener('click', () => {
+            titulo.textContent = 'Você clicou no botão!'; // Altera o texto
+            titulo.style.color = 'blue'; // Altera a cor do texto
+        });
+    </script>
+</body>
+</html>

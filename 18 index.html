@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços</title>
+    <style>
+        /* Estilo para o corpo da página */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(173, 172, 172);
+            color: white;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: grid;
+            min-height: 0vh;
+            grid-template-columns: 260px 1fr; 
+            grid-template-areas:
+                "header header"
+                "menu main"
+                "footer footer";
+        }
+        header {
+            grid-area: header;
+            background-color: rgb(14, 33, 90);
+            padding: 40px;
+            text-align: center;
+            width: 100%;
+            font-size: 48px;
+            display: flex;
+            align-items: center;
+            height: 90px;
+        }
+        aside p {
+            font-size: 14px;
+        }
+        aside {
+            grid-area: menu;
+            background-color: rgb(74, 83, 122);
+            padding: 30px;
+            font-size: 20px;
+        }
+        aside ul {
+            list-style: none;
+        }
+        aside li {
+            margin: 18px 0;
+        }
+        aside li:hover {
+            color: #6fc4ff;
+            cursor: pointer;
+        }
+        main {
+            grid-area: main;
+            background-color: rgb(245, 245, 238);
+            padding: 40px;
+            color: black;
+            font-size: 18px;
+        }
+        footer {
+            grid-area: footer;
+            background-color: rgb(14, 33, 90);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header><strong>Serviços</strong></header>
+
+        <aside>
+            <h2>Menu</h2>
+        <ul>
+            <li id="servico1">Sistema de Gestão Empresarial</li>
+            <li id="servico2">Criação de Sites Institucionais</li>
+            <li id="servico3">Implementação de Ferramentas Digitais</li>
+            <li id="servico4">Integração entre Sistemas</li>
+            <li id="servico5">Computação em Nuvem</li>
+            <li id="servico6">Suporte Técnico</li>
+        </ul>
+        </aside>
+
+        <main>
+                <p id="servico1">Desenvolvemos sistemas personalizados para gerenciar estoque, vendas, clientes, fornecedores e finanças. Essa solução ajuda pequenas empresas a organizar seus processos e tomar decisões com base em dados confiáveis.</p>
+
+                <p id="servico2">Criamos sites modernos, rápidos e responsivos para empresas que desejam fortalecer sua presença na internet, divulgar seus serviços e conquistar novos clientes.</p>
+
+                <p id="servico3">Auxiliamos na implantação de plataformas como Google Workspace, Microsoft 365, sistemas de atendimento, armazenamento em nuvem e ferramentas para aumentar a produtividade da equipe.</p>
+
+                <p id="servico4">Conectamos diferentes sistemas para que as informações sejam compartilhadas automaticamente, reduzindo retrabalho e evitando erros no fluxo de dados.</p>
+
+                <p id="servico5">Realizamos a migração de arquivos e sistemas para a nuvem, oferecendo maior segurança, acesso remoto, backup automático e melhor desempenho para a empresa.</p>
+
+                <p id="servico6">Prestamos suporte remoto e presencial para manutenção, atualizações, resuloção de problemas e orientação dos usuários, garantindo o funcionamento das soluções implantadas.</p>
+        </main>
+
+        <footer>
+            <h3 id="redessociais">Redes Sociais</h3>
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            <br>
+            <a href="https://www.LinkedIn.com" target="_blank">LinkedIn</a>
+            <br>
+            <a href="https://www.facebook.com" target="_blank">Facebook</a>
+    
+            <p>&copy; 2026 TechNova - Todos os direitos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>

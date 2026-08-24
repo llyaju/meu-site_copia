@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid e Flexbox Combinados</title>
+    <style>
+        .container {
+            display: grid; grid-template-columns: 1fr 3fr; grid-template-rows: 100px auto;
+            grid-template-areas: "header header" "sidebar content"; gap: 10px;
+        }
+        header {
+            grid-area: header; background-color: lightcoral; padding: 20px; text-align: center;
+        }
+        aside {
+            grid-area: sidebar; background-color: lightgreen; padding: 20px; display: flex;
+            flex-direction: column; align-items: flex-start; justify-content: space-between;
+        }
+        main {
+            grid-area: content; background-color: lightyellow; padding: 20px; display: flex;
+            flex-direction: column; gap: 10px;
+        }
+        .button {
+            padding: 10px; background-color: blue; color: white; border: none; cursor: pointer;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Cabeçalho</header>
+        <aside>
+            <button class="button">Botão 1</button>
+            <button class="button">Botão 2</button>
+        </aside>
+        <main>
+            <h2>Conteúdo Principal</h2>
+            <button class="button">Leia Mais</button>
+        </main>
+    </div>
+</body>
+</html>

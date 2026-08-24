@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relevância e Posição</title>
+    <style>
+        .box {
+            width: 200px; height: 200px; background-color: lightblue;
+            position: relative; /* Necessário para usar z-index */
+        }
+        .highlight {
+            width: 150px; height: 150px; background-color: yellow;
+            position: absolute; top: 50px; left: 50px;
+            z-index: 10; /* Elemento ficará "por cima" */
+        }
+        .important-box {
+            background-color: lightgreen !important; /* Usando !important */
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="highlight"></div>
+    <div class="box important-box">Este box tem fundo importante!</div>
+</div>
+</body>
+</html>

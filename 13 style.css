@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 300px;
+    background-color: #f0f0f0;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.box1 { background-color: #4CAF50; }
+.box2 { background-color: #2196F3; }
+.box3 { background-color: #FF5722; }
+.destaque {
+    background-color: #FFD700 !important; /* Amarelo com prioridade máxima */
+    z-index: 2; /* Sempre na frente */
+}
